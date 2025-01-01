@@ -90,6 +90,7 @@ export default function homeworks(): JSX.Element {
                 {homeworks.length > 0 ? (
                     homeworks.map((cw) => (
                         <li className="flex flex-col sm:flex-row justify-between items-start sm:items-center p-4 sm:p-5 bg-zinc-900 rounded-md mt-2 hover:bg-zinc-800 transition-colors duration-300 space-y-2 sm:space-y-0 mr-20" key={cw.id}>
+                            <p className="text-sm text-gray-500 mr-20">{new Date(cw.created).toLocaleDateString()}</p>
                             <h2 className="w-40 text-lg font-bold">{cw.subject}</h2>
                             <p className="text-md w-full pl-5 hidden sm:block">{cw.task.length > 100 ? `${cw.task.slice(0, 100)}...` : cw.task}</p>
                             <p className="text-md w-full pl-5 sm:hidden">{cw.task.length > 40 ? `${cw.task.slice(0, 40)}...` : cw.task}</p>
