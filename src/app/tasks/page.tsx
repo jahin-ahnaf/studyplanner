@@ -52,14 +52,14 @@ export default function Tasks() {
   };
 
   return (
-    <div className="ml-10 mt-20 mr-10 sm:ml-20 sm:mr-20">
+    <div className="ml-10 mt-20 mr-10 sm:ml-20 sm:mr-20 mb-20">
       <h1 className="text-3xl font-bold">Tasks</h1>
       <div className="mt-5">
         <Classwork tasks={tasks.classwork} />
         <Homework tasks={tasks.homework} />
         <button
           onClick={() => setIsModalOpen(true)}
-          className="fixed bottom-10 right-10 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md cursor-pointer transition-all duration-300"
+          className="shadow-md shadow-black fixed bottom-10 right-10 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full cursor-pointer transition-all duration-300"
         >
           Add Task
         </button>
